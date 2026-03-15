@@ -1,0 +1,24 @@
+<CineAI>:
+    orientation: "vertical"
+    padding: 20
+    spacing: 10
+
+    Label:
+        text: "CineAI"
+        font_size: 30
+
+    TextInput:
+        id: tema
+        hint_text: "Digite o tema do filme"
+        size_hint_y: None
+        height: 50
+
+    Button:
+        text: "Gerar Filme com IA"
+        size_hint_y: None
+        height: 50
+        on_press: root.gerar_filme()
+
+    Label:
+        id: resultado
+        text: ""
