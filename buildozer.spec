@@ -1,19 +1,24 @@
 [app]
-
 title = CineAI
 
 package.name = cineai
 
-package.domain = org.cineai
+package.domain = org.example
 
-source.include_exts = py,kv,png,jpg,mp4
+source.dir = .
 
-requirements = python3,kivy
+requirements = python3,kivy,cython
 
 orientation = portrait
 
-# (str) Source code where the main.py live
-source.dir = .
+version = 0.1
+
+# Caminho do NDK no Termux
+android.ndk_path = /data/data/com.termux/files/usr
+android.ndk_libs = /data/data/com.termux/files/usr/lib
+android.ndk_includes = /data/data/com.termux/files/usr/include
+
+source.include_exts = py,kv,png,jpg,mp4
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -27,9 +32,6 @@ source.dir = .
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
 #source.exclude_patterns = license,images/*/*.jpg
-
-# (str) Application versioning (method 1)
-version = 0.1
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
